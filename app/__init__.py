@@ -36,7 +36,7 @@ def signin_required(f):
 
 @app.route('/')
 def test():
-    return jsonify(testing=True, value=5)
+    return jsonify(success=True)
 
 @app.route('/signin', methods=['POST'])
 @crossdomain(origin='*', headers='Content-Type')
