@@ -55,6 +55,7 @@ def signin():
     return jsonify(success=True)
 
 @app.route('/org_file', methods=['GET'])
+@crossdomain(origin='http://localhost:8080', headers='Content-Type')
 @signin_required
 def get_org_file():
     with open(app.config['ORG_FILE_PATH'], 'r') as org_file:
