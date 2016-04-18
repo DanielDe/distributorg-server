@@ -39,7 +39,7 @@ def test():
     return jsonify(success=True)
 
 @app.route('/signin', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='localhost:8080,danieldehaas.com', headers='Content-Type')
+@crossdomain(origin='http://localhost:8080', headers='Content-Type')
 def signin():
     try:
         email = request.get_json()['email']
